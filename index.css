@@ -328,16 +328,15 @@ nav ul a:hover {
 }
 
 .hero h1 {
-    font-size: 4.5rem;
-    line-height: 1.2;
-    /* Increased to fix 'g' cutoff */
+    font-size: clamp(2.5rem, 6vw, 5.5rem);
+    line-height: 1.1;
     margin-bottom: 2rem;
     color: var(--text-primary);
     font-weight: 400;
     white-space: normal;
     word-wrap: break-word;
     padding-bottom: 0.1em;
-    /* Extra breathing room for descenders */
+    max-width: 100%;
 }
 
 /* Updated Gradient Accent - NotebookLM Style with Animation */
@@ -367,12 +366,12 @@ nav ul a:hover {
 }
 
 .hero p {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
     color: var(--text-secondary);
     margin-bottom: 3.5rem;
-    max-width: 750px;
+    max-width: 850px;
     font-weight: 300;
-    line-height: 1.65;
+    line-height: 1.6;
 }
 
 .hero-btns {
@@ -971,6 +970,45 @@ footer .logo span {
 
     nav ul a {
         font-size: 1.5rem;
+    }
+
+    .hero {
+        padding-top: 140px;
+        padding-bottom: 60px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.2rem, 10vw, 3.5rem);
+    }
+
+    .section-header h2 {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding-top: 120px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-primary, .btn-outline {
+        width: 100%;
+        text-align: center;
     }
 }
 
