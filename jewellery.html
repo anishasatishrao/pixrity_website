@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIXRITY | Augmented Reality for Luxury Retail</title>
+    <meta name="description"
+        content="PIXRITY provides clean, intelligent AR and VR visualization for luxury jewelry and watches. Experience the future of try-on technology.">
+    <link rel="stylesheet" href="index.css?v=3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- 3D Model Viewer (pinned to stable version) -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+</head>
+
+<body class="no-js">
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo" style="text-decoration: none;">
+                <img src="assets/logo.png" alt="PIXRITY Logo" class="logo-img">
+                PIXRITY<span></span>
+            </a>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Solutions <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 4px;"></i></a>
+                        <div class="dropdown-content">
+                            <a href="jewellery.html">Jewellery</a>
+                            <a href="industries.html">Industries</a>
+                            <a href="real-estate.html">Real Estate</a>
+                        </div>
+                    </li>
+                    <li><a href="#footer" class="btn-primary">Contact us</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="reveal">The Jewellery <span class="accent"> Experience Reimagined</span></h1>
+
+                <p class="reveal">At Pixrity we deliver stunning immersive virtual experiences that accelerate sales and
+                    bring jewelry shopping to life. Let your customers visualize, try on, and confidently purchase
+                    jewelry wherever they shop. Whether they're in-store, online, or discovering your brand through ads.
+                </p>
+                <div class="hero-btns reveal">
+                    <a href="#xr-solutions" class="btn-primary">Explore our
+                        Solutions</a>
+                    <!-- <a href="#footer" class="btn-secondary">Contact Us</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Showcase Section -->
+    <section class="video-showcase reveal">
+        <div class="container">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/qioH_Jxr60M?autoplay=0&rel=0" title="Pixrity Video"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="reveal">The real cost of <span class="accent">selling jewellery today.</span></h2>
+            </div>
+            <div class="platform-grid">
+                <!-- 01. Capital Stuck in Inventory -->
+                <div class="platform-card reveal">
+                    <div class="card-icon-area">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="tech-num">01. Inventory Cost</span>
+                        <h3 style="font-weight: bold; font-size: 1.1rem; color: var(--accent); margin-bottom: 0.5rem;">
+                            Capital Stuck in Inventory</h3>
+                        <div class="xr-toggle-content" id="cost-details-1">
+                            <p>Money shouldn’t sit in showcases. Unsold jewellery ties up working capital, storage
+                                space, insurance, and daily operational effort without guaranteeing a sale.</p>
+                        </div>
+                        <button class="btn-text-toggle" data-target="cost-details-1">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- 02. Beautiful designs. Broken economics. -->
+                <div class="platform-card reveal">
+                    <div class="card-icon-area">
+                        <i class="fas fa-hourglass-half"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="tech-num">02. Stuck Economics</span>
+                        <h3 style="font-weight: bold; font-size: 1.1rem; color: var(--accent); margin-bottom: 0.5rem;">
+                            Beautiful designs. Broken economics.</h3>
+                        <div class="xr-toggle-content" id="cost-details-2">
+                            <p>Behind every showroom lies a quiet struggle, capital locked in stock, limited displays,
+                                and customers who hesitate at the final moment.</p>
+                        </div>
+                        <button class="btn-text-toggle" data-target="cost-details-2">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- 03. When Trends Move Faster Than Stock -->
+                <div class="platform-card reveal">
+                    <div class="card-icon-area">
+                        <i class="fas fa-store-slash"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="tech-num">03. Trend Delay</span>
+                        <h3 style="font-weight: bold; font-size: 1.1rem; color: var(--accent); margin-bottom: 0.5rem;">
+                            When Trends Move Faster Than Stock</h3>
+                        <div class="xr-toggle-content" id="cost-details-3">
+                            <p>What sold yesterday doesn’t always sell today. Customer preferences change quickly, but
+                                inventory doesn’t. Slow-moving designs block cash flow and restrict your ability to
+                                offer variety.</p>
+                        </div>
+                        <button class="btn-text-toggle" data-target="cost-details-3">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- 04. Limited Displays. Limited Selling. -->
+                <div class="platform-card reveal">
+                    <div class="card-icon-area">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="tech-num">04. Display Limits</span>
+                        <h3 style="font-weight: bold; font-size: 1.1rem; color: var(--accent); margin-bottom: 0.5rem;">
+                            Limited Displays. Limited Selling.</h3>
+                        <div class="xr-toggle-content" id="cost-details-4">
+                            <p>Your showroom can’t show everything you own. Physical space allows you to present only a
+                                fraction of your collection, while customers want choice, comparison, and exploration.
+                            </p>
+                        </div>
+                        <button class="btn-text-toggle" data-target="cost-details-4">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- 05. An Experience That Can’t Scale -->
+                <div class="platform-card reveal">
+                    <div class="card-icon-area">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="tech-num">05. Scalability Gap</span>
+                        <h3 style="font-weight: bold; font-size: 1.1rem; color: var(--accent); margin-bottom: 0.5rem;">
+                            An Experience That Can’t Scale</h3>
+                        <div class="xr-toggle-content" id="cost-details-5">
+                            <p>Customers wait. Staff juggle. Opportunities slip. Not every customer can try everything,
+                                and not every staff member can assist everyone at once, especially during peak hours.
+                            </p>
+                        </div>
+                        <button class="btn-text-toggle" data-target="cost-details-5">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- 06. The Moment Where Sales Are Lost -->
+                <div class="platform-card reveal">
+                    <div class="card-icon-area">
+                        <i class="fas fa-arrow-trend-down"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="tech-num">06. Lost Conversion</span>
+                        <h3 style="font-weight: bold; font-size: 1.1rem; color: var(--accent); margin-bottom: 0.5rem;">
+                            The Moment Where Sales Are Lost</h3>
+                        <div class="xr-toggle-content" id="cost-details-6">
+                            <p>Interest is high. Confidence is not. When customers can’t clearly visualize how jewellery
+                                looks on them, they walk away to "think about it."</p>
+                        </div>
+                        <button class="btn-text-toggle" data-target="cost-details-6">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Featured XR Sections -->
+    <div class="section-header reveal" id="smarter-selling">
+        <h2>One Platform. <span class="accent">Built for Jewellery Brands.</span></h2>
+        <span class="tech-num">Pixrity is a single immersive platform designed to help jewellery businesses show more,
+            sell faster,
+            and stock smarter without changing how you operate today.</span>
+
+    </div>
+    <section class="xr-solutions-section" id="xr-solutions">
+        <div class="container">
+            <div class="platform-grid">
+                <!-- 01. XR Visualisation -->
+                <div class="platform-card xr-card reveal">
+                    <div class="video-frame">
+                        <video autoplay muted loop playsinline preload="auto">
+                            <source src="assets/VID_20260211_123518170_2 (2).mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="card-content">
+                        <span class="tech-num">01. XR Visualisation</span>
+                        <h3>Let customers see every detail before they decide.</h3>
+                        <p>A high fidelity product explorer that brings jewellery to life with realistic lighting,
+                            depth, and scale, so customers don’t just see jewellery, they experience it.</p>
+
+                        <div class="xr-toggle-content" id="xr-details-1">
+                            <ul class="bullet-list-luxury">
+                                <li>True to life materials and reflections</li>
+                                <li>Explore designs from every angle</li>
+                                <li>Designed to highlight craftsmanship and detail</li>
+                                <li>Runs directly on browser</li>
+                            </ul>
+                        </div>
+                        <button class="btn-text-toggle" data-target="xr-details-1">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- 02. XR Try-on -->
+                <div class="platform-card xr-card reveal">
+                    <div class="video-frame">
+                        <video autoplay muted loop playsinline preload="auto">
+                            <source src="assets/Virtual try on (1).mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="card-content">
+                        <span class="tech-num">02. XR Try-on</span>
+                        <h3>Precision that builds confidence.</h3>
+                        <p>Accurate try-on that places jewellery naturally on the customer in real time, so they know
+                            exactly how it looks on them.</p>
+
+                        <div class="xr-toggle-content" id="xr-details-2">
+                            <ul class="bullet-list-luxury">
+                                <li>Accurate placement for every jewellery</li>
+                                <li>Real time movement and alignment</li>
+                                <li>Natural, believable on-body experience</li>
+                                <li>Runs directly on browser</li>
+                            </ul>
+                        </div>
+                        <button class="btn-text-toggle" data-target="xr-details-2">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- 03. Virtual Try-on -->
+                <div class="platform-card xr-card reveal">
+                    <div class="video-frame">
+                        <video autoplay muted loop playsinline preload="auto">
+                            <source src="assets/Virtual try on (1).mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="card-content">
+                        <span class="tech-num">03. Virtual Try-on</span>
+                        <h3>Instant. Effortless.</h3>
+                        <p>Turn your current product catalog into an interactive try-on experience—ready to scale as
+                            your business grows.</p>
+
+                        <div class="xr-toggle-content" id="xr-details-3">
+                            <ul class="bullet-list-luxury">
+                                <li>Runs directly on browser</li>
+                                <li>Works across mobile and desktop</li>
+                                <li>Easy to deploy, easy to scale</li>
+                            </ul>
+                        </div>
+                        <button class="btn-text-toggle" data-target="xr-details-3">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+
+
+    <!-- One Platform Section (Touchpoints) -->
+    <section class="platform-restored" id="platform">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>One Solution across <span class="accent">the channels.</span></h2>
+                <span class="tech-num">Pixrity enables jewellery brands to implement its solutions seamlessly across
+                    three channels
+                    ensuring a consistent experience wherever customers interact with the brand.</span>
+            </div>
+
+            <div class="platform-grid">
+                <!-- 1. In-Store Smart Devices -->
+                <div class="platform-card reveal">
+                    <div class="card-img">
+                        <img src="assets/platform-instore.jpg" alt="In-Store Smart Devices" class="img-top-focus">
+                    </div>
+                    <div class="card-content">
+                        <span class="tech-num">In-Store Smart Devices</span>
+                        <h3>Turn your showroom into an experience.</h3>
+                        <p>A premium smart device inside your store that allows customers to explore, try, and compare
+                            jewellery digitally, without relying on physical inventory.</p>
+
+                        <div class="xr-toggle-content" id="channel-details-1">
+                            <div class="feature-list-block experience-block">
+                                <h4 style="color: var(--text-primary); margin-top: 1rem;">What Customers Experience:
+                                </h4>
+                                <ul class="bullet-list-luxury">
+                                    <li>Immersive visualisation of jewellery</li>
+                                    <li>Real time jewellery try-on</li>
+                                    <li>Instant comparison of designs, styles, and variations</li>
+                                    <li>Products can be viewed and explored in detail</li>
+                                    <li>Smart mirrors and interactive displays</li>
+                                    <li>One-tap journey from exploration to purchase</li>
+                                    <li>Store grade visual experience</li>
+                                </ul>
+                            </div>
+
+                            <div class="feature-list-block business-block">
+                                <h4 style="color: var(--text-primary); margin-top: 1rem;">What It Delivers for Your
+                                    Business:</h4>
+                                <ul class="bullet-list-luxury">
+                                    <li>Higher walk-in to purchase conversion</li>
+                                    <li>Reduced dependency on physical stock</li>
+                                    <li>Faster decision making with fewer staff interventions</li>
+                                    <li>Lower staff effort in handling and showcasing products</li>
+                                    <li>Optimised inventory and lower operational costs</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="btn-text-toggle" data-target="channel-details-1">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- 2. E-Commerce Integration -->
+                <div class="platform-card reveal">
+                    <div class="card-img">
+                        <img src="assets/platform-instore1.jpeg" alt="E-Commerce Integration">
+                    </div>
+                    <div class="card-content">
+                        <span class="tech-num">E-Commerce Integration</span>
+                        <h3>Let customers try jewellery before it reaches the cart.</h3>
+                        <p>Pixrity lets your customers see and try jewellery while browsing your website, helping them
+                            buy with confidence from anywhere.</p>
+
+                        <div class="xr-toggle-content" id="channel-details-2">
+                            <div class="feature-list-block experience-block">
+                                <h4 style="color: var(--text-primary); margin-top: 1rem;">What Customers Experience:
+                                </h4>
+                                <ul class="bullet-list-luxury">
+                                    <li>Try jewellery on themselves directly from product pages</li>
+                                    <li>Visualise products from every angle</li>
+                                    <li>360° product visualization from every angle</li>
+                                    <li>Explore designs on mobile, tablet, and desktop, No app downloads required</li>
+                                    <li>Checkout instantly after experience</li>
+                                </ul>
+                            </div>
+
+                            <div class="feature-list-block business-block">
+                                <h4 style="color: var(--text-primary); margin-top: 1rem;">What It Delivers for Your
+                                    Business:</h4>
+                                <ul class="bullet-list-luxury">
+                                    <li>Higher add-to-cart and checkout conversions</li>
+                                    <li>Fewer online returns</li>
+                                    <li>Increased confidence for high value online purchases</li>
+                                    <li>Online shopping that feels as real as the showroom</li>
+                                    <li>Stronger brand trust and differentiation</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="btn-text-toggle" data-target="channel-details-2">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- 3. Digital Ads & Campaigns -->
+                <div class="platform-card reveal">
+                    <div class="card-img">
+                        <img src="assets/platform-ads.jpg" alt="Digital Advertisements">
+                    </div>
+                    <div class="card-content">
+                        <span class="tech-num">Digital Ads & Campaigns</span>
+                        <h3>Make your ads shoppable and unforgettable.</h3>
+                        <p>Pixrity transforms jewellery advertising into an interactive experience that lets customers
+                            explore jewellery before they even visit your store.</p>
+
+                        <div class="xr-toggle-content" id="channel-details-3">
+                            <div class="feature-list-block experience-block">
+                                <h4 style="color: var(--text-primary); margin-top: 1rem;">What Customers Experience:
+                                </h4>
+                                <ul class="bullet-list-luxury">
+                                    <li>Immersive Ads with interaction</li>
+                                    <li>Pixrity brings jewellery to life across posters, newspapers, billboards,
+                                        Instagram, digital ads, and QR-enabled campaigns</li>
+                                    <li>Products can be viewed and explored in detail</li>
+                                    <li>Users try on jewelry directly in the ad</li>
+                                    <!-- <li>One tap takes them straight from the ads to buying</li> -->
+                                    <li>Interactive AR ads on Instagram, Facebook</li>
+
+                                    <!-- <li>Shoppable experiences that drive instant traffic</li> -->
+                                </ul>
+                            </div>
+
+                            <div class="feature-list-block business-block">
+                                <h4 style="color: var(--text-primary); margin-top: 1rem;">What It Delivers for Your
+                                    Business:</h4>
+                                <ul class="bullet-list-luxury">
+                                    <li>Higher engagement than static ads</li>
+                                    <li>Faster movement from interest to intent</li>
+                                    <li>More qualified, high-intent traffic</li>
+                                    <li>Premium, future ready brand positioning</li>
+                                    <li>Track engagement, measure ROI</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="btn-text-toggle" data-target="channel-details-3">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Value Propositions Restored -->
+            <div class="value-props reveal">
+                <h2 class="value-header">Elevate Your Brand <span class="accent">With Pixrity</span></h2>
+                <div class="value-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h3>Unlocking Digital Inventory</h3>
+                        <ul class="value-list">
+                            <li>Showcase your entire infinite catalog digitally</li>
+                            <li>Eliminate the constraints of physical showroom space</li>
+                            <li>Reduce security and insurance overheads</li>
+                            <li>Sell bespoke designs before manufacturing</li>
+                        </ul>
+                        <p class="value-quote">Precision-crafted digital stock for the modern jeweler.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>The Luxury of Certainty</h3>
+                        <ul class="value-list">
+                            <li>Instant visualization builds deep buyer confidence</li>
+                            <li>Reduce return rates through accurate AR placement</li>
+                            <li>Accelerate high-ticket decision-making cycles</li>
+                            <li>Premium experience that builds lasting trust</li>
+                        </ul>
+                        <p class="value-quote">Where innovation meets the standard of luxury.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-pixrity" id="why-pixrity">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Why <span class="accent">Pixrity?</span></h2>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-item reveal">
+                    <div class="why-item-icon"><i class="fas fa-warehouse"></i></div>
+                    <div class="why-item-content">
+                        <h4>Reduced inventory holding costs</h4>
+                    </div>
+                </div>
+                <div class="why-item reveal">
+                    <div class="why-item-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="why-item-content">
+                        <h4>Faster sales cycles</h4>
+                    </div>
+                </div>
+                <div class="why-item reveal">
+                    <div class="why-item-icon"><i class="fas fa-arrow-trend-up"></i></div>
+                    <div class="why-item-content">
+                        <h4>Higher conversion rates</h4>
+                    </div>
+                </div>
+                <div class="why-item reveal">
+                    <div class="why-item-icon"><i class="fas fa-undo"></i></div>
+                    <div class="why-item-content">
+                        <h4>Lower return rates</h4>
+                    </div>
+                </div>
+                <div class="why-item reveal">
+                    <div class="why-item-icon"><i class="fas fa-heart"></i></div>
+                    <div class="why-item-content">
+                        <h4>Stronger brand perception and loyalty</h4>
+                    </div>
+                </div>
+                <div class="why-item reveal">
+                    <div class="why-item-icon"><i class="fas fa-gem"></i></div>
+                    <div class="why-item-content">
+                        <h4>Jewellery-first design and realism</h4>
+                    </div>
+                </div>
+                <div class="why-item reveal">
+                    <div class="why-item-icon"><i class="fas fa-bullseye"></i></div>
+                    <div class="why-item-content">
+                        <h4>Focused on cost savings and conversions</h4>
+                    </div>
+                </div>
+                <!-- <div class="why-item reveal">
+                    <div class="why-item-icon"><i class="fas fa-plug"></i></div>
+                    <div class="why-item-content">
+                        <h4>Easy to integrate with existing systems</h4>
+                    </div>
+                </div> -->
+                <div class="why-item reveal">
+                    <div class="why-item-icon"><i class="fas fa-shield"></i></div>
+                    <div class="why-item-content">
+                        <h4>Secure, scalable, enterprise-ready</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA (Conversion Moment) -->
+    <section class="cta" id="contact">
+        <div class="cta-full-width reveal">
+            <div class="cta-box">
+                <h2>Ready to transform your jewelry business?</h2>
+                <p>Through Pixrity's immersive solutions "Sell More . Invest Less."</p>
+                <p>Let customers experience more. Let inventory do less.</p>
+                <div class="hero-btns reveal" style="margin-top: 2rem;">
+                    <a href="#footer" class="btn-primary">Book Demo</a>
+                    <a href="#footer" class="btn-outline">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" style="text-decoration: none;">
+                        <img src="assets/logo_raw.jpg" alt="PIXRITY Logo" class="logo-img">
+                        PIXRITY<span></span>
+                    </a>
+                    <p>Virtual Experiences for Luxury & Industry</p>
+                </div>
+                <div class="footer-links">
+
+                </div>
+                <div class="footer-links">
+                    <h4>Contact details</h4>
+                    <ul>
+                        <li><a href="mailto:info@pixrity.com">info@pixrity.com</a></li>
+                        <li><a href="tel:+917204466161">+91 7204466161</a></li>
+                        <!-- <li><a href="#">LinkedIn</a></li> -->
+                    </ul>
+                    <!-- <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                    </ul> -->
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 PIXRITY PVT LTD. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

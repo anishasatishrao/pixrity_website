@@ -1,0 +1,17 @@
+# Large assets
+*.zip
+*.mp4
+*.MOV
+*.avi
+
+# Dependencies
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build files
+dist/
+.vscode/
+.gemini/

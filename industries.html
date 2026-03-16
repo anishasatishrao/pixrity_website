@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIXRITY | Industrial XR Visualization</title>
+    <meta name="description"
+        content="PIXRITY provides true-scale interactive 3D and AR visualization for industrial products. Market your machinery worldwide without physical samples.">
+    <link rel="stylesheet" href="index.css?v=3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- 3D Model Viewer -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+</head>
+
+<body class="no-js">
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo" style="text-decoration: none;">
+                <img src="assets/logo.png" alt="PIXRITY Logo" class="logo-img">
+                PIXRITY<span></span>
+            </a>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Solutions <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 4px;"></i></a>
+                        <div class="dropdown-content">
+                            <a href="jewellery.html">Jewellery</a>
+                            <a href="industries.html">Industries</a>
+                            <a href="real-estate.html">Real Estate</a>
+                        </div>
+                    </li>
+                    <li><a href="#footer" class="btn-primary">Contact us</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="reveal" style="font-size: clamp(2.8rem, 5.5vw, 4rem); white-space: nowrap;">
+                    <span style="display: inline-block;">Market Your Industrial</span><br>
+                    <span class="accent" style="display: inline-block;">Products Worldwide</span>
+                </h1>
+                <p class="reveal">Help buyers visualize complex machinery, equipment, and components in true-scale
+                    interactive 3D and XR, directly from their phone or browser. Turn heavy industrial products into
+                    digital experiences that sell globally.</p>
+                <div class="hero-btns reveal">
+                    <a href="#pixrity-solution" class="btn-primary">See Live Demo</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Empty Video Container as requested -->
+    <section class="video-showcase reveal">
+        <div class="container">
+            <div class="video-container"
+                style="padding-bottom: 0; height: auto; display: flex; align-items: center; justify-content: center; background: transparent; box-shadow: none;">
+                <img src="assets/Gemini_Generated_Image_g03ig6g03ig6g03i.png" alt="Interactive Experience"
+                    style="width: 100%; height: auto; border-radius: 12px; display: block;">
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="reveal">Industrial Products Are <span class="accent">Hard to Sell Digitally.</span></h2>
+                <p>Manufacturers build world-class products, but showcasing them globally is extremely difficult.</p>
+            </div>
+            <div class="platform-grid">
+                <!-- 01. Large & Complex -->
+                <div class="platform-card reveal">
+                    <div class="card-icon-area">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="tech-num">Size & Complexity</span>
+                        <h3 style="font-weight: bold; font-size: 1.1rem; color: var(--accent); margin-bottom: 0.5rem;">
+                            Large & Complex</h3>
+                        <div class="xr-toggle-content" id="prob-1">
+                            <p>Industrial products are often too massive or intricate to convey through standard
+                                photography or 2D catalogs.</p>
+                        </div>
+                        <button class="btn-text-toggle" data-target="prob-1">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- 02. Expensive to Transport -->
+                <div class="platform-card reveal">
+                    <div class="card-icon-area">
+                        <i class="fas fa-truck-loading"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="tech-num">Logistics Cost</span>
+                        <h3 style="font-weight: bold; font-size: 1.1rem; color: var(--accent); margin-bottom: 0.5rem;">
+                            Expensive to Transport</h3>
+                        <div class="xr-toggle-content" id="prob-2">
+                            <p>Moving heavy machinery for exhibitions or client trials incurs massive shipping and
+                                insurance costs.</p>
+                        </div>
+                        <button class="btn-text-toggle" data-target="prob-2">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- 03. Hard to Explain with Photos -->
+                <div class="platform-card reveal">
+                    <div class="card-icon-area">
+                        <i class="fas fa-camera-retro"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="tech-num">Static Limits</span>
+                        <h3 style="font-weight: bold; font-size: 1.1rem; color: var(--accent); margin-bottom: 0.5rem;">
+                            Hard to Explain</h3>
+                        <div class="xr-toggle-content" id="prob-3">
+                            <p>Static images fail to show internal assemblies, mechanical movements, or the true scale
+                                of the equipment.</p>
+                        </div>
+                        <button class="btn-text-toggle" data-target="prob-3">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- 04. Samples are Expensive to Ship -->
+                <div class="platform-card reveal">
+                    <div class="card-icon-area">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="tech-num">Sample Waste</span>
+                        <h3 style="font-weight: bold; font-size: 1.1rem; color: var(--accent); margin-bottom: 0.5rem;">
+                            Sample Costs</h3>
+                        <div class="xr-toggle-content" id="prob-4">
+                            <p>Shipping physical samples globally is not just slow but often prohibitively expensive for
+                                industrial components.</p>
+                        </div>
+                        <button class="btn-text-toggle" data-target="prob-4">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- 05. Catalogs fail to explain -->
+                <div class="platform-card reveal">
+                    <div class="card-icon-area">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="tech-num">Documentation Gap</span>
+                        <h3 style="font-weight: bold; font-size: 1.1rem; color: var(--accent); margin-bottom: 0.5rem;">
+                            Catalog Failure</h3>
+                        <div class="xr-toggle-content" id="prob-5">
+                            <p>Traditional PDF catalogs lack interactivity, leaving buyers with unanswered questions
+                                about fitment and operation.</p>
+                        </div>
+                        <button class="btn-text-toggle" data-target="prob-5">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- 06. Buyers struggle to understand assemblies -->
+                <div class="platform-card reveal">
+                    <div class="card-icon-area">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="tech-num">Complexity Hurdle</span>
+                        <h3 style="font-weight: bold; font-size: 1.1rem; color: var(--accent); margin-bottom: 0.5rem;">
+                            Assembly Struggle</h3>
+                        <div class="xr-toggle-content" id="prob-6">
+                            <p>Without being able to "see inside," buyers struggle to grasp complex assemblies and
+                                maintenance requirements.</p>
+                        </div>
+                        <button class="btn-text-toggle" data-target="prob-6">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-header reveal" id="pixrity-solution" style="max-width: 1200px; margin: 0 auto;">
+        <h2><span style="display: inline-block; white-space: nowrap;">Turn Industrial Products Into</span> <br>
+            <span class="accent" style="display: inline-block; white-space: nowrap;">Interactive XR Experiences.</span>
+        </h2>
+    </div>
+
+    <section class="xr-solutions-section" id="xr-solutions">
+        <div class="container">
+            <div class="platform-grid">
+                <!-- 01. Product Visualization -->
+                <div class="platform-card xr-card reveal">
+                    <div class="video-frame"
+                        style="height: 250px; background: #e8e8e8; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 8px;">
+                        <img src="assets/xr_visualization.jpg" alt="Product Visualization"
+                            style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                    </div>
+                    <div class="card-content">
+                        <h3 style="font-weight: bold; font-size: 1.1rem; color: var(--accent); margin-bottom: 0.5rem;">
+                            Product Visualization (Sales &amp; Marketing)</h3>
+                        <div class="xr-toggle-content" id="sol-1">
+                            <ul class="bullet-list-luxury">
+                                <li>View products in true and across scale</li>
+                                <li>Transform (rotate, zoom), inspect, and explore</li>
+                                <li>Understand dimensions, finishes, assemblies</li>
+                                <li>Show fitment in real environments</li>
+                                <li>Reduce installation and service errors</li>
+                            </ul>
+                        </div>
+                        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1rem;">
+                            <button class="btn-text-toggle" data-target="sol-1">Learn More</button>
+                            <a href="https://nzgvg.zappar-us.io/8456180594743457039/" class="btn-text-toggle"
+                                target="_blank" style="text-decoration: none;">View Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 02. Industrial Workflow -->
+                <div class="platform-card xr-card reveal">
+                    <div class="video-frame"
+                        style="height: 250px; background: #e8e8e8; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 8px;">
+                        <img src="assets/xr_workflow.jpg" alt="Industrial Workflow"
+                            style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                    </div>
+                    <div class="card-content">
+                        <h3 style="font-weight: bold; font-size: 1.1rem; color: var(--accent); margin-bottom: 0.5rem;">
+                            Industrial Workflow</h3>
+                        <div class="xr-toggle-content" id="sol-2">
+                            <ul class="bullet-list-luxury">
+                                <li>Show how the product works internally</li>
+                                <li>Explain flow paths, movement, assembly</li>
+                                <li>Replace long explanations with instant clarity</li>
+                            </ul>
+                        </div>
+                        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1rem;">
+                            <button class="btn-text-toggle" data-target="sol-2">Learn More</button>
+                            <a href="https://nzgvg.zappar-us.io/8456180594743457039/" class="btn-text-toggle"
+                                target="_blank" style="text-decoration: none;">View Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 03. Training & Onboarding -->
+                <div class="platform-card xr-card reveal">
+                    <div class="video-frame"
+                        style="height: 250px; background: #e8e8e8; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 8px;">
+                        <img src="assets/xr_training.jpg" alt="Training & Onboarding"
+                            style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                    </div>
+                    <div class="card-content">
+                        <h3 style="font-weight: bold; font-size: 1.1rem; color: var(--accent); margin-bottom: 0.5rem;">
+                            Training &amp; Onboarding</h3>
+                        <div class="xr-toggle-content" id="sol-3">
+                            <ul class="bullet-list-luxury">
+                                <li>AR-guided product understanding</li>
+                                <li>Faster technician learning</li>
+                                <li>Higher retention, fewer mistakes</li>
+                            </ul>
+                        </div>
+                        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1rem;">
+                            <button class="btn-text-toggle" data-target="sol-3">Learn More</button>
+                            <a href="https://nzgvg.zappar-us.io/8456180594743457039/" class="btn-text-toggle"
+                                target="_blank" style="text-decoration: none;">View Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="platform-restored" id="how-it-works">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>From a simple 2D image to <span class="accent">Global XR Experience.</span></h2>
+                <span class="tech-num">How Pixrity transforms your industrial product marketing into a streamlined
+                    digital workflow.</span>
+            </div>
+
+            <div class="platform-grid">
+                <!-- 01. Integration -->
+                <div class="platform-card reveal">
+                    <div class="card-icon-area">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="tech-num">Step 01. Preparation</span>
+                        <h3>Provide 2D Files</h3>
+                        <p>Simply share your product design photos or CAD designs with us. We handle the heavy lifting
+                            of
+                            conversion.</p>
+                        <div class="xr-toggle-content" id="step-1">
+                            <ul class="bullet-list-luxury">
+                                <li>Compatible with major 2D formats</li>
+                                <li>Secure data handling</li>
+                                <li>Optimization for web performance</li>
+                            </ul>
+                        </div>
+                        <button class="btn-text-toggle" data-target="step-1">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- 02. Conversion -->
+                <div class="platform-card reveal">
+                    <div class="card-icon-area">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="tech-num">Step 02. Transformation</span>
+                        <h3>Asset Optimization</h3>
+                        <p>Pixrity converts complex models into high-fidelity, optimized 3D XR assets ready for instant
+                            web access.</p>
+                        <div class="xr-toggle-content" id="step-2">
+                            <ul class="bullet-list-luxury">
+                                <li>Photorealistic materials</li>
+                                <li>Lightweight loading</li>
+                                <li>Cross-device compatibility</li>
+                            </ul>
+                        </div>
+                        <button class="btn-text-toggle" data-target="step-2">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- 03. Distribution -->
+                <div class="platform-card reveal">
+                    <div class="card-icon-area">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="tech-num">Step 03. Deployment</span>
+                        <h3>Share Globally</h3>
+                        <p>Your product becomes a digital link or QR code, accessible via WhatsApp, email, or your
+                            website instantly.</p>
+                        <div class="xr-toggle-content" id="step-3">
+                            <ul class="bullet-list-luxury">
+                                <li>No apps required</li>
+                                <li>Instant distribution to buyers</li>
+                                <li>Embed in digital brochures</li>
+                            </ul>
+                        </div>
+                        <button class="btn-text-toggle" data-target="step-3">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-pixrity" id="why-pixrity">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>What <span class="accent">Pixrity Enables?</span></h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-item reveal">
+                    <div class="why-item-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="why-item-content">
+                        <h4>Sales Visualization Without Samples</h4>
+                    </div>
+                </div>
+                <div class="why-item reveal">
+                    <div class="why-item-icon"><i class="fas fa-info-circle"></i></div>
+                    <div class="why-item-content">
+                        <h4>Visual Clarity for Complex Mechanisms</h4>
+                    </div>
+                </div>
+                <div class="why-item reveal">
+                    <div class="why-item-icon"><i class="fas fa-users-cog"></i></div>
+                    <div class="why-item-content">
+                        <h4>Accelerated Training & Onboarding</h4>
+                    </div>
+                </div>
+                <div class="why-item reveal">
+                    <div class="why-item-icon"><i class="fas fa-tools"></i></div>
+                    <div class="why-item-content">
+                        <h4>Installation & Maintenance Guidance</h4>
+                    </div>
+                </div>
+                <div class="why-item reveal">
+                    <div class="why-item-icon"><i class="fas fa-check-double"></i></div>
+                    <div class="why-item-content">
+                        <h4>Quality Validation Before Manufacturing</h4>
+                    </div>
+                </div>
+                <div class="why-item reveal">
+                    <div class="why-item-icon"><i class="fas fa-globe"></i></div>
+                    <div class="why-item-content">
+                        <h4>Global Product Reach via Simple Links</h4>
+                    </div>
+                </div>
+                <div class="why-item reveal">
+                    <div class="why-item-icon"><i class="fas fa-coins"></i></div>
+                    <div class="why-item-content">
+                        <h4>Massive Reduction in Sample Logistics</h4>
+                    </div>
+                </div>
+                <div class="why-item reveal">
+                    <div class="why-item-icon"><i class="fas fa-rocket"></i></div>
+                    <div class="why-item-content">
+                        <h4>Accelerated Buyer Decision Cycles</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="platform-restored" id="industries">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Industries Using <span class="accent">Pixrity.</span></h2>
+                <span class="tech-num">Versatile XR visualization across hardware and industrial sectors.</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2rem;">
+                <span
+                    style="background: var(--accent-light); padding: 0.8rem 1.5rem; border-radius: 50px; font-weight: 500;">⚙️
+                    Industrial equipment</span>
+                <span
+                    style="background: var(--accent-light); padding: 0.8rem 1.5rem; border-radius: 50px; font-weight: 500;">🏭
+                    Heavy machinery</span>
+                <span
+                    style="background: var(--accent-light); padding: 0.8rem 1.5rem; border-radius: 50px; font-weight: 500;">🔧
+                    Hardware components</span>
+                <span
+                    style="background: var(--accent-light); padding: 0.8rem 1.5rem; border-radius: 50px; font-weight: 500;">🚰
+                    Valves and pipelines</span>
+                <span
+                    style="background: var(--accent-light); padding: 0.8rem 1.5rem; border-radius: 50px; font-weight: 500;">⚡
+                    Electrical equipment</span>
+                <span
+                    style="background: var(--accent-light); padding: 0.8rem 1.5rem; border-radius: 50px; font-weight: 500;">🚜
+                    Agricultural machinery</span>
+                <span
+                    style="background: var(--accent-light); padding: 0.8rem 1.5rem; border-radius: 50px; font-weight: 500;">🚗
+                    Automotive parts</span>
+                <span
+                    style="background: var(--accent-light); padding: 0.8rem 1.5rem; border-radius: 50px; font-weight: 500;">🛠
+                    Manufacturing tools</span>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- FINAL CTA -->
+    <section class="cta" id="contact">
+        <div class="cta-full-width reveal">
+            <div class="cta-box">
+                <h2>Make Your Industrial Products Visible to the World</h2>
+                <p>Stop relying on photos, videos, and physical samples. Start showcasing with interactive XR.</p>
+                <div class="hero-btns reveal" style="margin-top: 2rem;">
+                    <a href="https://calendly.com/pixrity/30min" class="btn-primary">Book a Demo</a>
+                    <!-- <a href="#footer" class="btn-outline">Contact Us</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" style="text-decoration: none;">
+                        <img src="assets/logo_raw.jpg" alt="PIXRITY Logo" class="logo-img">
+                        PIXRITY<span></span>
+                    </a>
+                    <p>Virtual Experiences for Luxury & Industry</p>
+                </div>
+                <div class="footer-links"></div>
+                <div class="footer-links">
+                    <h4>Contact Details</h4>
+                    <ul>
+                        <li><a href="mailto:info@pixrity.com">info@pixrity.com</a></li>
+                        <li><a href="tel:+917204466161">+91 7204466161</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 PIXRITY PVT LTD. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
