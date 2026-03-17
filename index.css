@@ -83,50 +83,61 @@ h6 {
     color: var(--accent);
 }
 
-/* Navbar - Floating Pill */
+/* Navbar - Standard Header */
 .navbar {
     position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto;
-    max-width: 90%;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
-    padding: 0.8rem 2.5rem;
-    background: #5c5c5c;
-    border-radius: 50px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 1.5rem 0;
+    background: transparent;
     transition: var(--transition);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .navbar.scrolled {
-    top: 10px;
-    background: #4a4a4a;
-    padding: 0.6rem 2.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.1);
 }
 
 .navbar .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 2.5rem;
-    padding: 0;
+}
+
+/* Nav Pill Style */
+.nav-pill {
+    background: #5c5c5c;
+    border-radius: 50px;
+    padding: 0.6rem 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: var(--transition);
+}
+
+.navbar.scrolled .nav-pill {
+    background: #4a4a4a;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 700;
-    color: #FFFFFF;
+    color: var(--text-primary);
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .logo-img {
-    height: 24px;
+    height: 32px;
     width: auto;
 }
 
