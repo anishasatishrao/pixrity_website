@@ -2456,17 +2456,23 @@ footer .logo span {
 .explore-btn {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--text-primary);
+    gap: 12px;
+    background: #000;
+    color: #fff !important;
+    padding: 1rem 2.2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
     text-decoration: none;
     transition: var(--transition);
 }
 
 .explore-btn:hover {
-    gap: 15px;
-    color: var(--accent);
+    background: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    gap: 18px;
+    color: #fff !important;
 }
 
 @media (max-width: 1024px) {
