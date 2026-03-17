@@ -2340,31 +2340,160 @@ footer .logo span {
     padding-left: 0.5rem;
 }
 
-/* ALIGNMENT FIX: 
-   On desktop, ensure the 'What Customers Experience' block has a consistent minimum height.
-   This forces the 'What It Delivers' block (business-block) to start at the same vertical position
-   across all cards in the row.
-*/
-@media (min-width: 1024px) {
+/* Premium Solutions Layout */
+.xr-solutions-section {
+    padding: 8rem 0;
+    overflow: hidden;
+}
 
-    /* Standardize description height to align first headers */
-    .card-content p {
-        min-height: 5rem;
-        margin-bottom: 2rem;
+.solution-row {
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+    margin-bottom: 12rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.solution-row.reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.solution-row:last-child {
+    margin-bottom: 0;
+}
+
+.solution-row:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.solution-image {
+    flex: 1;
+    position: relative;
+}
+
+.solution-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 32px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.solution-image:hover img {
+    transform: scale(1.02);
+}
+
+.solution-content {
+    flex: 1;
+    position: relative;
+    padding-top: 2rem;
+}
+
+.solution-number {
+    position: absolute;
+    top: -4rem;
+    left: 0;
+    font-size: 10rem;
+    font-weight: 800;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.05);
+    z-index: -1;
+    font-family: 'Inter', sans-serif;
+}
+
+.solution-row:nth-child(even) .solution-number {
+    left: auto;
+    right: 0;
+}
+
+.solution-content h3 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.solution-content p {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    max-width: 500px;
+    line-height: 1.8;
+}
+
+.our-offerings {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.our-offerings h4 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.offering-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.offering-arrow {
+    color: #4285F4;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.explore-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.explore-btn:hover {
+    gap: 15px;
+    color: var(--accent);
+}
+
+@media (max-width: 1024px) {
+    .solution-row {
+        flex-direction: column !important;
+        gap: 4rem;
+        margin-bottom: 8rem;
     }
-
-    /* Standardize experience block height to align second headers */
-    .experience-block {
-        min-height: 400px;
+    
+    .solution-content {
+        text-align: center;
         display: flex;
         flex-direction: column;
-        margin-bottom: 1.5rem;
+        align-items: center;
     }
-
-    .business-block {
-        margin-top: 0;
-        flex: 1;
+    
+    .solution-number {
+        left: 50% !important;
+        transform: translateX(-50%);
+        top: -3rem;
+        font-size: 8rem;
+    }
+    
+    .solution-content p {
+        max-width: 100%;
     }
 }
+
 
 /* End of file cleanup */
