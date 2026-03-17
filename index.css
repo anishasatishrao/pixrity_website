@@ -53,7 +53,7 @@ footer {
     align-items: center;
     width: 100%;
     position: relative;
-    padding: 35px 0;
+    padding: 10px 0;
 }
 
 h1,
@@ -320,13 +320,42 @@ nav ul a:hover {
 .hero {
     background: #FFFFFF;
     text-align: center;
-    /* Center align text */
     justify-content: center;
-    padding-top: 180px;
-    padding-bottom: 100px;
-    min-height: 95vh;
+    padding-top: 140px;
+    padding-bottom: 60px;
+    min-height: 85vh;
     display: flex;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-image: 
+        linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    transform: perspective(500px) rotateX(60deg) translateY(0);
+    transform-origin: top;
+    z-index: -1;
+    animation: grid-move 20s linear infinite;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 80%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 80%);
+}
+
+@keyframes grid-move {
+    0% {
+        transform: perspective(500px) rotateX(60deg) translateY(0);
+    }
+    100% {
+        transform: perspective(500px) rotateX(60deg) translateY(50px);
+    }
 }
 
 .hero .container {
@@ -403,8 +432,7 @@ nav ul a:hover {
 /* Section Headers */
 .section-header {
     text-align: center;
-    margin-bottom: 4rem;
-    /* Reduced from 8rem */
+    margin-bottom: 3rem;
     max-width: 800px;
     margin-inline: auto;
 }
@@ -590,8 +618,7 @@ nav ul a:hover {
 /* Value Props Restoration Styles */
 .value-props {
     text-align: center;
-    margin-top: 6rem;
-    /* Reduced from 10rem */
+    margin-top: 3rem;
 }
 
 .value-header {
@@ -993,8 +1020,8 @@ footer .logo span {
     }
 
     .hero {
-        padding-top: 140px;
-        padding-bottom: 60px;
+        padding-top: 100px;
+        padding-bottom: 40px;
     }
 
     .hero h1 {
@@ -2342,7 +2369,7 @@ footer .logo span {
 
 /* Premium Solutions Layout */
 .xr-solutions-section {
-    padding: 8rem 0;
+    padding: 2rem 0 1rem 0;
     overflow: hidden;
 }
 
@@ -2350,7 +2377,7 @@ footer .logo span {
     display: flex;
     align-items: center;
     gap: 8rem;
-    margin-bottom: 12rem;
+    margin-bottom: 2rem;
     opacity: 0;
     transform: translateY(30px);
     transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
