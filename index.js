@@ -54,12 +54,42 @@ document.addEventListener('DOMContentLoaded', () => {
             if (targetContent) {
                 const isActive = targetContent.classList.toggle('active');
                 btn.textContent = isActive ? 'Show Less' : 'Learn More';
-
-                // Optional: Scroll to card if it's being expanded and goes off-screen
-                if (isActive) {
-                    // btn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                }
             }
         });
     });
+
+    // Infinite Grid Animation & Interaction
+    const hero = document.getElementById('home');
+    const gridPatterns = document.querySelectorAll('pattern');
+    
+    if (hero && gridPatterns.length > 0) {
+        let gridX = 0;
+        let gridY = 0;
+        const speedX = 0.5;
+        const speedY = 0.5;
+
+        // Mouse Reveal Effect
+        hero.addEventListener('mousemove', (e) => {
+            const rect = hero.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            hero.style.setProperty('--mouse-x', `${x}px`);
+            hero.style.setProperty('--mouse-y', `${y}px`);
+        });
+
+        // Infinite Scroll Animation
+        function animateGrid() {
+            gridX = (gridX + speedX) % 40;
+            gridY = (gridY + speedY) % 40;
+            
+            gridPatterns.forEach(pattern => {
+                pattern.setAttribute('x', gridX);
+                pattern.setAttribute('y', gridY);
+            });
+            
+            requestAnimationFrame(animateGrid);
+        }
+        
+        animateGrid();
+    }
 });
