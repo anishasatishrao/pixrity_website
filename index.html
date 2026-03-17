@@ -19,19 +19,21 @@
         <div class="container">
             <a href="index.html" class="logo" style="text-decoration: none;">
                 <img src="assets/logo.png" alt="PIXRITY Logo" class="logo-img">
-                PIXRITY<span></span>
+                PIXRITY
             </a>
             <nav>
                 <ul>
+                    <li><a href="index.html">Home</a></li>
                     <li class="dropdown">
                         <a href="javascript:void(0)" class="dropbtn">Solutions <i class="fas fa-chevron-down"
                                 style="font-size: 0.8em; margin-left: 4px;"></i></a>
                         <div class="dropdown-content">
-                            <a href="jewellery.html">Jewellery</a>
-                            <a href="industries.html">Industries</a>
-                            <a href="real-estate.html">Real Estate</a>
+                            <a href="jewellery.html">XR Try-on</a>
+                            <a href="industries.html">XR Visualization</a>
+                            <a href="real-estate.html">Experiential Learning</a>
                         </div>
                     </li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#footer" class="btn-primary">Contact us</a></li>
                 </ul>
             </nav>
@@ -50,22 +52,33 @@
                     <span>Transforming imagination</span><br>
                     <span>into </span><span class="accent"> Experience</span>
                 </h1>
-                <p class="reveal">At Pixrity, we turn imagination into realities through AI and XR — redefining how we connect, learn, and experience.</p>
+                <p class="reveal">At Pixrity, we turn imagination into realities through AI and XR , redefining how we
+                    connect, learn, and experience.</p>
             </div>
         </div>
     </section>
 
-    <!-- Intro Text Section -->
-    <section class="intro-section" style="padding: 6rem 0; background: var(--bg-color);">
+    <!-- About Section -->
+    <section class="intro-section" id="about" style="padding: 6rem 0; background: var(--bg-color);">
         <div class="container reveal">
-            <h2 style="font-size: 3.5rem; margin-bottom: 2rem; color: var(--text-primary);">Pixrity</h2>
-            <p style="font-size: 1.5rem; color: var(--text-secondary); margin-bottom: 2rem; max-width: 900px;">Pixrity
-                empowers organizations to rethink how they communicate, engage, and deliver value.</p>
-            <p style="font-size: 1.1rem; color: var(--text-secondary); max-width: 900px; line-height: 1.8;">By
-                harnessing advanced technologies (AI, AR, VR, and XR), we craft immersive experiences that make complex
-                ideas simple, interactions meaningful, and learning unforgettable. Whether it's reimagining customer
-                journeys, enhancing brand storytelling, or transforming classrooms, we turn your vision into interactive
-                experiences that move people and deliver measurable results.</p>
+            <h2 style="font-size: 3.5rem; margin-bottom: 2rem; color: var(--text-primary); font-weight: 700;">At Pixrity</h2>
+            <p style="font-size: 1.5rem; color: var(--text-secondary); margin-bottom: 2rem; max-width: 900px; font-weight: 600;">We empower organizations to rethink how they communicate, engage, and deliver value.</p>
+            <p style="font-size: 1.1rem; color: var(--text-secondary); max-width: 900px; line-height: 1.8; margin-bottom: 3rem;">By harnessing advanced technologies (AI, AR, VR, and XR), we craft immersive experiences that make complex ideas simple, interactions meaningful, and learning unforgettable. Whether it's reimagining customer journeys, enhancing brand storytelling, or transforming classrooms, we turn your vision into interactive experiences that move people and deliver measurable results.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem;">
+                <div>
+                    <h4 style="color: var(--accent); margin-bottom: 1rem;">Experience-Led Innovation</h4>
+                    <p style="font-size: 0.95rem; color: var(--text-secondary);">We combine creative storytelling with cutting-edge tech to build deeper connections.</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--accent); margin-bottom: 1rem;">Human-Centered Design</h4>
+                    <p style="font-size: 0.95rem; color: var(--text-secondary);">Our solutions are intuitive, accessible, and designed around real human experiences.</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--accent); margin-bottom: 1rem;">Measurable Impact</h4>
+                    <p style="font-size: 0.95rem; color: var(--text-secondary);">We focus on results—higher engagement, better learning, and increased ROI.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -140,40 +153,45 @@
             </div>
         </div>
     </section>
-
-    <!-- Our Solutions (Simplified for Homepage) -->
+    <!-- Our Solutions -->
     <section class="xr-solutions-section" id="solutions-cards" style="padding: 6rem 0; background: var(--section-alt);">
         <div class="container reveal">
             <div class="section-header">
                 <h2 class="attractive-heading">Our Solutions</h2>
             </div>
-            <div class="platform-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                <!-- Jewellery -->
-                <a href="jewellery.html" style="text-decoration: none;">
-                    <div class="platform-card hover-lift"
-                        style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: var(--radius); background: var(--bg-color); border: 1px solid var(--border); height: 100%;">
-                        <h3 class="attractive-subheading" style="margin-bottom: 1.5rem; text-align: center;">Jewellery</h3>
-                        <p style="color: var(--text-secondary); text-align: center; font-size: 1rem;">Virtual Try-on & 3D visualization for premium luxury accessories.</p>
-                    </div>
-                </a>
+            <div class="platform-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <!-- XR Try-on -->
+                <div class="platform-card hover-lift"
+                    style="padding: 2.5rem; display: flex; flex-direction: column; border-radius: var(--radius); background: var(--bg-color); border: 1px solid var(--border); height: 100%;">
+                    <h3 class="attractive-subheading" style="margin-bottom: 1.5rem; font-weight: 700;">XR Try-on</h3>
+                    <p style="color: var(--text-secondary); font-size: 1rem; margin-bottom: 1.5rem;">
+                        <strong>Our offerings:</strong><br>
+                        • Smart Instore Integration<br>
+                        • Ecommerce Integration<br>
+                        • Ads
+                    </p>
+                    <a href="jewellery.html" class="btn-primary" style="align-self: flex-start; margin-top: auto;">Explore</a>
+                </div>
 
-                <!-- Industries -->
-                <a href="industries.html" style="text-decoration: none;">
-                    <div class="platform-card hover-lift"
-                        style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: var(--radius); background: var(--bg-color); border: 1px solid var(--border); height: 100%;">
-                        <h3 class="attractive-subheading" style="margin-bottom: 1.5rem; text-align: center;">Industries</h3>
-                        <p style="color: var(--text-secondary); text-align: center; font-size: 1rem;">True-scale interactive 3D and AR visualization for industrial products.</p>
-                    </div>
-                </a>
+                <!-- XR Visualization -->
+                <div class="platform-card hover-lift"
+                    style="padding: 2.5rem; display: flex; flex-direction: column; border-radius: var(--radius); background: var(--bg-color); border: 1px solid var(--border); height: 100%;">
+                    <h3 class="attractive-subheading" style="margin-bottom: 1.5rem; font-weight: 700;">XR Visualization</h3>
+                    <p style="color: var(--text-secondary); font-size: 1rem; margin-bottom: 1.5rem;">
+                        Transform static products into interactive 3D/AR visualizations. Scale your product experience across all channels.
+                    </p>
+                    <a href="industries.html" class="btn-primary" style="align-self: flex-start; margin-top: auto;">Explore</a>
+                </div>
 
-                <!-- Real Estate -->
-                <a href="real-estate.html" style="text-decoration: none;">
-                    <div class="platform-card hover-lift"
-                        style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: var(--radius); background: var(--bg-color); border: 1px solid var(--border); height: 100%;">
-                        <h3 class="attractive-subheading" style="margin-bottom: 1.5rem; text-align: center;">Real Estate</h3>
-                        <p style="color: var(--text-secondary); text-align: center; font-size: 1rem;">Immersive virtual tours and architectural visualization for properties.</p>
-                    </div>
-                </a>
+                <!-- Experiential Learning -->
+                <div class="platform-card hover-lift"
+                    style="padding: 2.5rem; display: flex; flex-direction: column; border-radius: var(--radius); background: var(--bg-color); border: 1px solid var(--border); height: 100%;">
+                    <h3 class="attractive-subheading" style="margin-bottom: 1.5rem; font-weight: 700;">Experiential Learning</h3>
+                    <p style="color: var(--text-secondary); font-size: 1rem; margin-bottom: 1.5rem;">
+                        Transforming education through immersive XR experiences... coming soon.
+                    </p>
+                    <a href="#" class="btn-primary" style="align-self: flex-start; margin-top: auto; opacity: 0.6; pointer-events: none;">Coming Soon</a>
+                </div>
             </div>
         </div>
     </section>
@@ -195,8 +213,8 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="logo" style="text-decoration: none;">
-                        <img src="assets/logo_raw.jpg" alt="PIXRITY Logo" class="logo-img">
-                        PIXRITY<span></span>
+                        <img src="assets/logo.png" alt="PIXRITY Logo" class="logo-img">
+                        PIXRITY
                     </a>
                     <p>Virtual Experiences for Luxury & Industry</p>
                 </div>
