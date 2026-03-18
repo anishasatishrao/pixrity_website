@@ -74,13 +74,12 @@
                 submitBtn.classList.add('loading');
                 submitBtn.innerHTML = '<i class="fas fa-spinner"></i> Sending...';
 
-                const formData = new FormData(contactForm);
-                const data = {
-                    name: formData.get('name'),
-                    email: formData.get('email'),
-                    phone: formData.get('phone'),
-                    timestamp: new Date().toLocaleString()
-                };
+                const formDataObj = new FormData(contactForm);
+                const formData = new URLSearchParams();
+                formData.append('name', formDataObj.get('name'));
+                formData.append('email', formDataObj.get('email'));
+                formData.append('phone', formDataObj.get('phone'));
+                formData.append('timestamp', new Date().toLocaleString());
 
                 try {
                     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyDjeLG5YDfJGfHE5i_9pQ1bIGSecA2O4at5Gk50fJomqUdbwBT15bndeJoVTXITUiT/exec';
@@ -89,7 +88,7 @@
                         method: 'POST',
                         mode: 'no-cors',
                         cache: 'no-cache',
-                        body: JSON.stringify(data)
+                        body: formData
                     });
 
                     contactForm.style.display = 'none';
