@@ -1095,10 +1095,17 @@ footer .logo span {
         width: 80%;
     }
 
-    nav ul a {
-        font-size: 1.8rem;
-        font-weight: 700;
+    nav ul a, 
+    .dropbtn {
+        font-size: 1.8rem !important;
+        font-weight: 700 !important;
         letter-spacing: -0.02em;
+        justify-content: center;
+    }
+
+    .dropbtn i {
+        font-size: 0.7em;
+        margin-left: 8px;
     }
 
     .logo {
