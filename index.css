@@ -1042,7 +1042,7 @@ footer .logo span {
     }
 
     .desktop-only {
-        display: none !important;
+        display: inline-block !important; /* Keep it visible per user request */
     }
 
     .mobile-only {
@@ -1050,12 +1050,21 @@ footer .logo span {
     }
 
     .nav-actions {
-        gap: 0;
+        display: flex;
+        align-items: center;
+        gap: 12px; /* Gap between button and hamburger */
+    }
+
+    .nav-actions .btn-primary {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+        white-space: nowrap;
     }
 
     .menu-toggle {
         display: flex;
-        margin-left: 1rem;
+        margin-left: 0;
+        flex-shrink: 0;
     }
 
     nav {
@@ -1090,6 +1099,15 @@ footer .logo span {
         font-size: 1.8rem;
         font-weight: 700;
         letter-spacing: -0.02em;
+    }
+
+    .logo {
+        font-size: 24px;
+        gap: 8px;
+    }
+
+    .logo-img {
+        height: 24px;
     }
 
     .hero {
