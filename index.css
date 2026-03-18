@@ -141,6 +141,15 @@ h6 {
     width: auto;
 }
 
+/* Visibility Utilities */
+.mobile-only {
+    display: none;
+}
+
+.desktop-only {
+    display: inline-block;
+}
+
 @keyframes float {
     0% {
         transform: translateY(0px);
@@ -1032,22 +1041,34 @@ footer .logo span {
         align-items: center;
     }
 
-    .hero h1 {
-        font-size: 2.5rem;
+    .desktop-only {
+        display: none !important;
+    }
+
+    .mobile-only {
+        display: block !important;
+    }
+
+    .nav-actions {
+        gap: 0;
     }
 
     .menu-toggle {
         display: flex;
+        margin-left: 1rem;
     }
 
     nav {
         position: fixed;
-        right: -110%;
+        right: -100%;
         top: 0;
         width: 100%;
         height: 100vh;
-        background: var(--bg-color);
-        transition: var(--transition);
+        background: #1a1a1a !important; /* Dark solid background for premium feel */
+        border-radius: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        transition: 0.5s cubic-bezier(0.7, 0, 0.3, 1);
         z-index: 999;
         display: flex;
         align-items: center;
@@ -1060,11 +1081,15 @@ footer .logo span {
 
     nav ul {
         flex-direction: column;
-        gap: 3rem;
+        gap: 2.5rem;
+        text-align: center;
+        width: 80%;
     }
 
     nav ul a {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
     }
 
     .hero {
