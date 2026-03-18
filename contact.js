@@ -23,9 +23,6 @@
                 menuToggle.classList.remove('active');
             }
 
-            modalOverlay.style.display = 'flex';
-            // Force reflow
-            modalOverlay.offsetHeight;
             modalOverlay.classList.add('active');
             document.body.style.overflow = 'hidden';
         };
@@ -33,9 +30,9 @@
         const closeModal = () => {
             console.log('Closing Contact Modal');
             modalOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+            // Reset form after transition
             setTimeout(() => {
-                modalOverlay.style.display = 'none';
-                document.body.style.overflow = '';
                 if (formSuccess && formSuccess.style.display === 'block') {
                     if (contactForm) contactForm.style.display = 'flex';
                     formSuccess.style.display = 'none';
