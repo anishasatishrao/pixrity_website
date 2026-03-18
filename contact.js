@@ -50,7 +50,9 @@
             if (!target) return;
 
             const href = target.getAttribute('href') || '';
-            if (href.includes('#footer') || href.includes('#contact')) {
+            const isContactTrigger = target.classList.contains('contact-trigger');
+
+            if (isContactTrigger || href.includes('#footer') || href.includes('#contact')) {
                 console.log('Intercepted contact link click:', href);
                 e.preventDefault();
                 e.stopPropagation();
