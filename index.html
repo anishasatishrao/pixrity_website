@@ -34,11 +34,12 @@
                         </div>
                     </li>
                     <li><a href="index.html#about">About</a></li>
-                    <li><a href="#">Insights</a></li>
+                     <li><a href="#">Insights</a></li>
+                    <li><a href="#footer">Contact</a></li>
                 </ul>
             </nav>
             <div class="nav-actions">
-                <a href="#footer" class="btn-primary desktop-only">Contact us</a>
+                <a href="#footer" class="btn-primary">Contact us</a>
                 <div class="menu-toggle">
                     <span></span>
                     <span></span>
@@ -213,7 +214,7 @@
                 </div>
                 <div class="solution-content">
                     <span class="solution-number">01</span>
-                    <h3>Visual Commerce</h3>
+                    <h3>XR Try-on</h3>
                     <p>AI-powered retail shopping experiences that turn product browsing into interactive discovery with
                         virtual try-on, 3D visualization, and immersive in-store experiences.</p>
                     <div class="our-offerings">
@@ -231,7 +232,7 @@
                             <span>Smart In-store Retail Solutions</span>
                         </div>
                     </div>
-                    <a href="jewellery.html" class="explore-btn">Explore Visual Commerce →</a>
+                    <a href="jewellery.html" class="explore-btn">Explore XR Try-on →</a>
                 </div>
             </div>
 
@@ -242,7 +243,7 @@
                 </div>
                 <div class="solution-content">
                     <span class="solution-number">02</span>
-                    <h3>Product Visualization</h3>
+                    <h3>XR Visualization</h3>
                     <p>Transform static products into interactive 3D/AR assets. Empower your customers to visualize
                         products in their own space with photorealistic detail and interactive features.</p>
                     <div class="our-offerings">
@@ -260,7 +261,7 @@
                             <span>Photorealistic Web-based XR</span>
                         </div>
                     </div>
-                    <a href="industries.html" class="explore-btn">Explore 3D Visualization →</a>
+                    <a href="industries.html" class="explore-btn">Explore XR Visualization →</a>
                 </div>
             </div>
 
@@ -311,7 +312,8 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="logo" style="text-decoration: none;">
-                        <img src="assets/ChatGPT Image Mar 17, 2026, 03_31_55 PM.png" alt="PIXRITY Logo" class="logo-img">
+                        <img src="assets/ChatGPT Image Mar 17, 2026, 03_31_55 PM.png" alt="PIXRITY Logo"
+                            class="logo-img">
                         PIXRITY
                     </a>
                     <p>Virtual Experiences for Luxury & Industry</p>
@@ -331,7 +333,46 @@
         </div>
     </footer>
 
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal-overlay">
+        <div class="modal-container">
+            <div id="modalClose" class="modal-close">
+                <i class="fas fa-times"></i>
+            </div>
+            <div id="contactContent" class="modal-content">
+                <div id="contactFormWrapper">
+                    <h2>Get in Touch</h2>
+                    <p>Experience the future of your brand. Share your details and we'll reach out.</p>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email ID</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                        </div>
+                        <button type="submit" class="btn-primary submit-btn">
+                            Submit <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+                <!-- Success State -->
+                <div id="formSuccess" class="form-success">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Thank You!</h3>
+                    <p>We've received your inquiry and will get back to you shortly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="index.js"></script>
+    <script src="contact.js"></script>
 </body>
 
 </html>
