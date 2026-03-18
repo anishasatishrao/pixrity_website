@@ -1,4 +1,4 @@
-(function() {
+(function () {
     console.log('PIXRITY Contact System Initializing...');
 
     const initContact = () => {
@@ -14,7 +14,7 @@
 
         const openModal = () => {
             console.log('Opening Contact Modal');
-            
+
             // Close mobile menu if open
             const navNav = document.querySelector('nav');
             const menuToggle = document.querySelector('.menu-toggle');
@@ -70,7 +70,7 @@
                 e.preventDefault();
                 const submitBtn = contactForm.querySelector('.submit-btn');
                 const originalBtnText = submitBtn.innerHTML;
-                
+
                 submitBtn.classList.add('loading');
                 submitBtn.innerHTML = '<i class="fas fa-spinner"></i> Sending...';
 
@@ -82,8 +82,8 @@
                 formData.append('timestamp', new Date().toLocaleString());
 
                 try {
-                    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyDjeLG5YDfJGfHE5i_9pQ1bIGSecA2O4at5Gk50fJomqUdbwBT15bndeJoVTXITUiT/exec';
-                    
+                    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzaZTzJ_w6djLrljp1iYxhDSBBr_FnRGkTt_Lkg5CtzZkc3uVy30uKpxlYLu7o7XIei/exec';
+
                     await fetch(SCRIPT_URL, {
                         method: 'POST',
                         mode: 'no-cors',
