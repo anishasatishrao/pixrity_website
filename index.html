@@ -30,14 +30,17 @@
             pointer-events: none !important;
             transition: opacity 0.4s ease !important;
         }
+
         .modal-overlay.active {
             opacity: 1 !important;
             pointer-events: all !important;
         }
+
         .modal-container {
             transform: translateY(30px) scale(0.95) !important;
             transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
         }
+
         .modal-overlay.active .modal-container {
             transform: translateY(0) scale(1) !important;
         }
@@ -64,12 +67,14 @@
                         </div>
                     </li>
                     <li><a href="index.html#about">About</a></li>
-                     <li><a href="#">Insights</a></li>
-                    <li><a href="#footer">Contact</a></li>
+                    <li><a href="#">Insights</a></li>
+                    <!-- <li><a href="#footer">Contact</a></li> -->
                 </ul>
             </nav>
             <div class="nav-actions">
-                <a href="javascript:void(0)" class="btn-primary contact-trigger" onclick="document.getElementById('contactModal').classList.add('active');document.body.style.overflow='hidden';">Contact us</a>
+                <a href="javascript:void(0)" class="btn-primary contact-trigger"
+                    onclick="document.getElementById('contactModal').classList.add('active');document.body.style.overflow='hidden';">Contact
+                    us</a>
                 <div class="menu-toggle">
                     <span></span>
                     <span></span>
@@ -405,8 +410,8 @@
     <script src="contact.js"></script>
     <script>
         // Fallback: direct button wiring in case event delegation fails
-        document.querySelectorAll('.contact-trigger').forEach(function(btn) {
-            btn.addEventListener('click', function(e) {
+        document.querySelectorAll('.contact-trigger').forEach(function (btn) {
+            btn.addEventListener('click', function (e) {
                 e.preventDefault();
                 var modal = document.getElementById('contactModal');
                 if (modal) { modal.classList.add('active'); document.body.style.overflow = 'hidden'; }
