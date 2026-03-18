@@ -83,7 +83,7 @@
                 };
 
                 try {
-                    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby99PNa5M_tSl3Ul44Oq6cD1hJbOFwV4_iWKmaQVzFsM8Zr0n1828MTzFOP9KF5fOh8/exec';
+                    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyDjeLG5YDfJGfHE5i_9pQ1bIGSecA2O4at5Gk50fJomqUdbwBT15bndeJoVTXITUiT/exec';
                     
                     await fetch(SCRIPT_URL, {
                         method: 'POST',
