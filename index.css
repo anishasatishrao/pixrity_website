@@ -1024,6 +1024,34 @@ footer .logo span {
     font-size: 0.85rem;
 }
 
+/* Menu Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    width: 24px;
+    height: 2px;
+    background: var(--text-primary);
+    transition: var(--transition);
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 /* Responsive */
 @media (max-width: 900px) {
     .solution-grid {
@@ -1041,30 +1069,32 @@ footer .logo span {
         align-items: center;
     }
 
-    .desktop-only {
-        display: inline-block !important; /* Keep it visible per user request */
+    .logo {
+        font-size: 22px !important;
+        gap: 6px !important;
     }
 
-    .mobile-only {
-        display: block !important;
+    .logo-img {
+        height: 22px !important;
     }
 
     .nav-actions {
-        display: flex;
-        align-items: center;
-        gap: 12px; /* Gap between button and hamburger */
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
     }
 
     .nav-actions .btn-primary {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.85rem;
-        white-space: nowrap;
+        padding: 0.5rem 1rem !important;
+        font-size: 0.8rem !important;
+        white-space: nowrap !important;
     }
 
     .menu-toggle {
-        display: flex;
-        margin-left: 0;
-        flex-shrink: 0;
+        display: flex !important;
+        position: static !important; /* Force to stay in flex flow */
+        margin: 0 !important;
+        flex-shrink: 0 !important;
     }
 
     nav {
@@ -1073,7 +1103,7 @@ footer .logo span {
         top: 0;
         width: 100%;
         height: 100vh;
-        background: #1a1a1a !important; /* Dark solid background for premium feel */
+        background: #1a1a1a !important; 
         border-radius: 0 !important;
         padding: 0 !important;
         box-shadow: none !important;
@@ -1085,7 +1115,7 @@ footer .logo span {
     }
 
     nav.active {
-        right: 0;
+        right: 0 !important;
     }
 
     nav ul {
@@ -1106,15 +1136,6 @@ footer .logo span {
     .dropbtn i {
         font-size: 0.7em;
         margin-left: 8px;
-    }
-
-    .logo {
-        font-size: 24px;
-        gap: 8px;
-    }
-
-    .logo-img {
-        height: 24px;
     }
 
     .hero {
@@ -1197,32 +1218,7 @@ footer .logo span {
     margin-inline: auto;
 }
 
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 6px;
-    cursor: pointer;
-    z-index: 1001;
-}
 
-.menu-toggle span {
-    width: 24px;
-    height: 2px;
-    background: var(--text-primary);
-    transition: var(--transition);
-}
-
-.menu-toggle.active span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
-
-.menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-toggle.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-}
 
 /* Process Section */
 .process {
@@ -1278,33 +1274,9 @@ footer .logo span {
     margin-inline: auto;
 }
 
-/* Mobile Menu */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 6px;
-    cursor: pointer;
-    z-index: 1001;
-}
 
-.menu-toggle span {
-    width: 24px;
-    height: 2px;
-    background: var(--text-primary);
-    transition: var(--transition);
-}
 
-.menu-toggle.active span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
 
-.menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-toggle.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-}
 
 /* Why Pixrity Section */
 .why-pixrity {
@@ -1781,30 +1753,7 @@ footer .logo span {
         text-align: center;
     }
 
-    .menu-toggle {
-        display: flex;
-    }
 
-    nav {
-        position: fixed;
-        right: -100%;
-        top: 0;
-        width: 100%;
-        height: 100vh;
-        background: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: 0.5s;
-    }
-
-    nav.active {
-        right: 0;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
 
     /* Touchpoint Cards Responsive */
     .touchpoint-grid {
@@ -2024,31 +1973,7 @@ footer .logo span {
    ========================================= */
 @media (max-width: 768px) {
 
-    /* --- Header / Navbar --- */
-    /* Restore Logo in Mobile View */
-    .navbar .logo {
-        display: flex;
-        /* Restored */
-        font-size: 24px;
-        /* Slightly smaller for mobile */
-    }
 
-    .navbar .logo-img {
-        height: 30px;
-    }
-
-    /* Ensure Menu Toggle is visible and positioned correctly */
-    .menu-toggle {
-        display: flex;
-        position: absolute;
-        right: 5%;
-        top: 2rem;
-    }
-
-    .navbar {
-        padding: 1.5rem 0;
-        /* Adjust padding */
-    }
 
     /* --- Typography (Reduced Sizes & Fix Wrapping) --- */
     .hero h1 {
