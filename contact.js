@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const submitBtn = contactForm.querySelector('.submit-btn');
         const originalBtnText = submitBtn.innerHTML;
-        
+
         // Show loading state
         submitBtn.classList.add('loading');
         submitBtn.innerHTML = '<i class="fas fa-spinner"></i> Sending...';
@@ -65,11 +65,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // NOTE: The URL will be replaced by the user with their Google Apps Script Web App URL
-            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyVnC7_vU6Y8-j7vXbXzC_6-9f-vU6Y8/exec'; // Placeholder
-            
+            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby99PNa5M_tSl3Ul44Oq6cD1hJbOFwV4_iWKmaQVzFsM8Zr0n1828MTzFOP9KF5fOh8/exec'; // Placeholder
+
             // For now, we simulate the submission
             console.log('Submitting data:', data);
-            
+
             // Simulate network delay
             await new Promise(resolve => setTimeout(resolve, 1500));
 
