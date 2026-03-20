@@ -2661,6 +2661,14 @@ footer .logo span {
     color: #fff;
 }
 
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-group select:invalid {
+    color: rgba(255, 255, 255, 0.5);
+}
+
 .form-group input:focus,
 .form-group select:focus {
     outline: none;
