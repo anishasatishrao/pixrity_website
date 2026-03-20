@@ -79,6 +79,7 @@
                 formData.append('name', formDataObj.get('name'));
                 formData.append('email', formDataObj.get('email'));
                 formData.append('phone', formDataObj.get('phone'));
+                formData.append('service', formDataObj.get('service'));
                 formData.append('timestamp', new Date().toLocaleString());
 
                 try {
