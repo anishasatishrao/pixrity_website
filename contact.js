@@ -83,7 +83,7 @@
                 formData.append('timestamp', new Date().toLocaleString());
 
                 try {
-                    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxaMcnzrx57XPw8i-IOGbg2uLtvi-oNXSJYFbDfazcQ4j3zUwiecshwZ_P_0hN55Tlq/exec';
+                    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyJI15oHDOINu9vC_4O0kbb5JD0ecRqedwzjyrw76Vr7YvBRmSsk0ti56SyqzZlN--s/exec';
 
                     await fetch(SCRIPT_URL, {
                         method: 'POST',
