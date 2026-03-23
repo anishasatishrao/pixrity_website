@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Admin | PIXRITY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .admin-container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .admin-form .form-group { margin-bottom: 1.5rem; }
+        .admin-form label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
+        .admin-form input, .admin-form textarea, .admin-form select {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 12px;
+            border: 1px solid #eee;
+            background: #fcfcfc;
+            font-family: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <h1>Create New <span class="accent">Insight</span></h1>
+        <p style="margin-bottom: 2rem; color: #666;">Fill this form to publish a new blog post to the website.</p>
+        
+        <form id="blogAdminForm" class="admin-form">
+            <div class="form-group">
+                <label>Blog Title</label>
+                <input type="text" name="title" placeholder="e.g. The Future of AR in Luxury" required>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                <div class="form-group">
+                    <label>Author</label>
+                    <input type="text" name="author" placeholder="Author Name" required>
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <select name="category">
+                        <option value="AI">AI</option>
+                        <option value="Spatial Computing">Spatial Computing</option>
+                        <option value="Luxury">Luxury</option>
+                        <option value="Industry">Industry</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Featured Image URL</label>
+                <input type="url" name="imageUrl" placeholder="https://images.unsplash.com/..." required>
+                <small style="color: #999;">Use high-quality Unsplash links for best results.</small>
+            </div>
+            <div class="form-group">
+                <label>Excerpt (Short Summary)</label>
+                <textarea name="excerpt" rows="2" placeholder="Describe the post in 2-3 sentences..." required></textarea>
+            </div>
+            <div class="form-group">
+                <label>Content (Full Blog Text)</label>
+                <textarea name="content" rows="8" placeholder="Write your insight here..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary submit-btn" style="width: 100%;">Publish Insight</button>
+        </form>
+        <div style="margin-top: 2rem; text-align: center;">
+            <a href="insights.html" style="color: #666; text-decoration: none;">&larr; Back to Insights</a>
+        </div>
+    </div>
+
+    <script src="blog.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights | PIXRITY - Future of Vision</title>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .insights-hero {
+            padding: 160px 0 60px;
+            text-align: center;
+        }
+        .insights-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+            padding-bottom: 100px;
+        }
+        #insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+        .loader-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+        }
+        .pix-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(66, 133, 244, 0.1);
+            border-top: 3px solid #4285F4;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body class="no-js">
+    <!-- Global Background -->
+    <div class="global-background">
+        <div class="grid-container absolute inset-0 z-0">
+            <div class="grid-layer grid-base">
+                <svg width="100%" height="100%"><defs><pattern id="grid-pattern-base" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="currentColor" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(#grid-pattern-base)"/></svg>
+            </div>
+            <div class="grid-layer grid-reveal">
+                <svg width="100%" height="100%"><defs><pattern id="grid-pattern-reveal" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="currentColor" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(#grid-pattern-reveal)"/></svg>
+            </div>
+        </div>
+    </div>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo" style="text-decoration: none;">
+                <img src="assets/ChatGPT Image Mar 17, 2026, 03_31_55 PM.png" alt="PIXRITY Logo" class="logo-img">
+                PIXRITY
+            </a>
+            <nav class="nav-pill">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Solutions <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 4px;"></i></a>
+                        <div class="dropdown-content">
+                            <a href="jewellery.html">Jewellery Try-on</a>
+                            <a href="industries.html">Industries Visualization</a>
+                            <a href="real-estate.html">Experiential Learning</a>
+                        </div>
+                    </li>
+                    <li><a href="index.html#pixrity-vision">About</a></li>
+                    <li><a href="insights.html" class="active">Insights</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="javascript:void(0)" class="btn-primary contact-trigger">Contact us</a>
+                <div class="menu-toggle"><span></span><span></span><span></span></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="insights-hero">
+        <div class="container">
+            <h1 class="reveal">Pixrity <span class="accent">Insights</span></h1>
+            <p class="reveal">Exploring the convergence of AI, Spatial Computing, and the Future of Vision.</p>
+        </div>
+    </div>
+
+    <main class="insights-container">
+        <div id="insights-grid">
+            <div class="loader-container">
+                <div class="pix-spinner"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer copied from index.html for consistency -->
+    <!-- ... simplified footer for now ... -->
+    <footer style="padding: 4rem 0; border-top: 1px solid rgba(0,0,0,0.05); text-align: center;">
+        <p>&copy; 2026 PIXRITY VISIONS. All rights reserved.</p>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div class="modal-overlay" id="contactModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div id="formSuccess" class="form-success">
+                <i class="fas fa-check-circle"></i>
+                <h3>Message Sent!</h3>
+                <p>Our team will get back to you shortly.</p>
+            </div>
+            <form id="contactForm" class="contact-form">
+                <h2 style="margin-bottom: 0.5rem;">Let's Connect</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Start your journey to becoming legendary.</p>
+                <div class="form-group"><input type="text" name="name" placeholder="Full Name" required></div>
+                <div class="form-group"><input type="email" name="email" placeholder="Email Address" required></div>
+                <div class="form-group"><input type="tel" name="phone" placeholder="Phone Number"></div>
+                <div class="form-group">
+                    <select name="service" required>
+                        <option value="" disabled selected>Enquiry For</option>
+                        <option value="Jewellery Try-on">Jewellery Try-on</option>
+                        <option value="Industries Visualization">Industries Visualization</option>
+                        <option value="Experiential Learning">Experiential Learning</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group"><textarea name="message" placeholder="Project Details" rows="4"></textarea></div>
+                <button type="submit" class="btn-primary submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="index.js"></script>
+    <script src="contact.js"></script>
+    <script src="blog.js"></script>
+</body>
+</html>
