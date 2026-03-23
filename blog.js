@@ -1,6 +1,6 @@
 // PIXRITY Blog System - blog.js
 (function () {
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxkZ8paMK6FVvxOwzV1wieg-7bC5JPEJl484ownndEBxbEfSLeP3auAWo0b1GvPRFsd/exec'; // USER MUST UPDATE THIS
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzAXFu3IN-a3D8J5AFBdRYMdZlfVTk7aVWX-SgY28WRqbbzO9oE5RWSfm_WyF6EV56K/exec'; // USER MUST UPDATE THIS
 
     const initBlog = () => {
         const insightsGrid = document.getElementById('insights-grid');
@@ -46,16 +46,21 @@
 
             const card = document.createElement('div');
             card.className = 'blog-card reveal';
+            const title = blog.title || blog.Title || 'Insight';
+            const imageUrl = blog.imageurl || blog.imageUrl || blog.ImageURL || 'assets/blog-placeholder.jpg';
+            const category = blog.category || blog.Category || 'Insights';
+            const id = (blog.id || blog.ID || '').toString().trim();
+
             card.innerHTML = `
                 <div class="blog-image">
-                    <img src="${blog.imageurl || 'assets/blog-placeholder.jpg'}" alt="${blog.title}">
-                    <span class="blog-category">${blog.category || 'Insights'}</span>
+                    <img src="${imageUrl}" alt="${title}">
+                    <span class="blog-category">${category}</span>
                 </div>
                 <div class="blog-info">
                     <span class="blog-date">${date}</span>
-                    <h3>${blog.title}</h3>
-                    <p>${blog.excerpt}</p>
-                    <a href="javascript:void(0)" class="btn-text" onclick="alert('Full blog reading feature coming soon! Content ID: ${blog.id}')">Read Full Insight <i class="fas fa-arrow-right"></i></a>
+                    <h3>${title}</h3>
+                    <p>${blog.excerpt || blog.Excerpt || ''}</p>
+                    <a href="javascript:void(0)" class="btn-text" onclick="alert('Full blog reading feature coming soon! Content ID: ${id}')">Read Full Insight <i class="fas fa-arrow-right"></i></a>
                 </div>
             `;
             insightsGrid.appendChild(card);
