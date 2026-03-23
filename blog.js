@@ -1,11 +1,11 @@
 // PIXRITY Blog System - blog.js
 (function () {
-    const SCRIPT_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec'; // USER MUST UPDATE THIS
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxkZ8paMK6FVvxOwzV1wieg-7bC5JPEJl484ownndEBxbEfSLeP3auAWo0b1GvPRFsd/exec'; // USER MUST UPDATE THIS
 
     const initBlog = () => {
         const insightsGrid = document.getElementById('insights-grid');
         const adminForm = document.getElementById('blogAdminForm');
-        
+
         // --- INSIGHTS PAGE LOGIC ---
         if (insightsGrid) {
             fetchBlogs();
@@ -22,7 +22,7 @@
         try {
             const response = await fetch(SCRIPT_URL);
             const blogs = await response.json();
-            
+
             if (blogs.length === 0) {
                 insightsGrid.innerHTML = '<div class="no-posts">Stay tuned! Our experts are crafting new insights.</div>';
                 return;
@@ -78,7 +78,7 @@
             e.preventDefault();
             const submitBtn = form.querySelector('.submit-btn');
             const originalText = submitBtn.innerHTML;
-            
+
             submitBtn.classList.add('loading');
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Posting...';
 
@@ -99,7 +99,7 @@
                     body: JSON.stringify(payload)
                 });
                 const result = await response.json();
-                
+
                 if (result.result === 'success') {
                     alert('Success! Blog post published.');
                     form.reset();
