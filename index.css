@@ -130,10 +130,11 @@ h6 {
 .logo {
     font-size: 32px;
     font-weight: 700;
-    color: var(--text-primary);
+    color: #000 !important;
     display: flex;
     align-items: center;
     gap: 12px;
+    text-decoration: none !important;
 }
 
 .logo-img {
@@ -165,7 +166,8 @@ h6 {
 }
 
 .logo span {
-    color: var(--accent);
+    color: #000 !important;
+    text-decoration: none !important;
 }
 
 nav ul {
