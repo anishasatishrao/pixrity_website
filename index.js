@@ -58,40 +58,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Infinite Grid Animation & Interaction
-    // Global Grid Animation & Interaction
-    const globalBg = document.querySelector('.global-background');
-    const gridPatterns = document.querySelectorAll('pattern');
-    
-    if (globalBg && gridPatterns.length > 0) {
-        let gridX = 0;
-        let gridY = 0;
-        const speedX = 0.5;
-        const speedY = 0.5;
-        const patternSize = 50; // Updated to match HTML
-
-        // Global Mouse Reveal Effect
-        document.addEventListener('mousemove', (e) => {
-            const x = e.clientX;
-            const y = e.clientY;
-            // Fixed background is relative to viewport, so clientX/Y is perfect.
-            globalBg.style.setProperty('--mouse-x', `${x}px`);
-            globalBg.style.setProperty('--mouse-y', `${y}px`);
-        });
-
-        // Infinite Scroll Animation
-        function animateGrid() {
-            gridX = (gridX + speedX) % patternSize;
-            gridY = (gridY + speedY) % patternSize;
-            
-            gridPatterns.forEach(pattern => {
-                pattern.setAttribute('x', gridX);
-                pattern.setAttribute('y', gridY);
-            });
-            
-            requestAnimationFrame(animateGrid);
-        }
-        
-        animateGrid();
-    }
 });
