@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <!-- Main Style -->
     <link rel="stylesheet" href="index.css">
     <style>
@@ -16,24 +17,28 @@
             padding: 160px 0 60px;
             text-align: center;
         }
+
         .insights-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 5%;
             padding-bottom: 100px;
         }
+
         #insights-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 2.5rem;
             margin-top: 4rem;
         }
+
         .loader-container {
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 300px;
         }
+
         .pix-spinner {
             width: 50px;
             height: 50px;
@@ -42,9 +47,19 @@
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
+
 <body class="no-js">
     <!-- Global Background Removal -->
 
@@ -58,7 +73,8 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li class="dropdown">
-                        <a href="javascript:void(0)" class="dropbtn">Solutions <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 4px;"></i></a>
+                        <a href="javascript:void(0)" class="dropbtn">Solutions <i class="fas fa-chevron-down"
+                                style="font-size: 0.8em; margin-left: 4px;"></i></a>
                         <div class="dropdown-content">
                             <a href="jewellery.html">Jewellery Try-on</a>
                             <a href="industries.html">Industries Visualization</a>
@@ -101,11 +117,10 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="logo">
-                        <img src="assets/inverted_no_border.png"
-                            alt="PIXRITY Logo" class="logo-img">
+                        <img src="assets/inverted_no_border.png" alt="PIXRITY Logo" class="logo-img">
                         <span>PIXRITY</span>
                     </a>
-                    <p>Virtual Experiences for Luxury & Industry</p>
+                    <p> Transforming Experiences</p>
                 </div>
                 <div class="footer-links"></div>
                 <div class="footer-links">
@@ -133,7 +148,8 @@
             </div>
             <form id="contactForm" class="contact-form">
                 <h2 style="margin-bottom: 0.5rem;">Let's Connect</h2>
-                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Start your journey to becoming legendary.</p>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Start your journey to becoming legendary.
+                </p>
                 <div class="form-group"><input type="text" name="name" placeholder="Full Name" required></div>
                 <div class="form-group"><input type="email" name="email" placeholder="Email Address" required></div>
                 <div class="form-group"><input type="tel" name="phone" placeholder="Phone Number"></div>
@@ -146,7 +162,8 @@
                         <option value="Other">Other</option>
                     </select>
                 </div>
-                <div class="form-group"><textarea name="message" placeholder="Project Details" rows="4"></textarea></div>
+                <div class="form-group"><textarea name="message" placeholder="Project Details" rows="4"></textarea>
+                </div>
                 <button type="submit" class="btn-primary submit-btn">Send Message</button>
             </form>
         </div>
@@ -157,4 +174,5 @@
     <script src="contact.js"></script>
     <script src="blog.js"></script>
 </body>
+
 </html>
