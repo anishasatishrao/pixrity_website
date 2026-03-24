@@ -196,15 +196,9 @@ nav ul a:hover {
     font-size: clamp(2.5rem, 4vw, 3.5rem);
     font-weight: 700;
     color: var(--text-primary);
-    background: linear-gradient(90deg, #1A73E8 0%, #8E24AA 25%, #EA4335 50%, #8E24AA 75%, #1A73E8 100%);
-    background-size: 200% auto;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     margin-bottom: 1rem;
     letter-spacing: -0.02em;
     text-align: center;
-    animation: gradient-shift 4s ease-in-out infinite;
 }
 
 /* Signature Pixrity Gradient */
