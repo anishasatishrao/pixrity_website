@@ -2382,18 +2382,14 @@ footer .logo span {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
-}
-
-.benefit-tile:hover {
-    transform: translateY(-8px);
-    border-color: var(--accent);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    text-align: center;
 }
 
 .benefit-tile i {
     font-size: 2rem;
     color: var(--accent);
     margin-bottom: 0.5rem;
+    margin-inline: auto;
 }
 
 .benefit-tile h4 {
