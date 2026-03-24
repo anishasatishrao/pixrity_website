@@ -1452,9 +1452,9 @@ footer .logo span {
 
 .touchpoint-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 3rem;
-    margin-bottom: 6rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 5rem;
 }
 
 .touchpoint-card {
@@ -1474,49 +1474,49 @@ footer .logo span {
 
 .touchpoint-header {
     background: linear-gradient(135deg, var(--accent-light) 0%, var(--bg-color) 100%);
-    padding: 2.5rem;
+    padding: 1.75rem;
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.25rem;
     border-bottom: 1px solid var(--border);
 }
 
 .touchpoint-icon {
-    width: 64px;
-    height: 64px;
+    width: 52px;
+    height: 52px;
     background: var(--accent);
-    border-radius: 16px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     flex-shrink: 0;
 }
 
 .touchpoint-title h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    margin-bottom: 0.4rem;
     color: var(--text-primary);
     font-weight: 600;
 }
 
 .touchpoint-tagline {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--text-secondary);
     font-style: italic;
     margin: 0;
 }
 
 .touchpoint-content {
-    padding: 2.5rem;
+    padding: 1.75rem;
 }
 
 .touchpoint-description {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--text-secondary);
-    line-height: 1.7;
-    margin-bottom: 2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
 }
 
 .touchpoint-features,
@@ -1748,17 +1748,17 @@ footer .logo span {
     /* Touchpoint Cards Responsive */
     .touchpoint-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 
     .touchpoint-header {
         flex-direction: column;
         text-align: center;
-        padding: 2rem;
+        padding: 1.5rem;
     }
 
     .touchpoint-content {
-        padding: 2rem;
+        padding: 1.5rem;
     }
 
     .touchpoint-features ul li {
