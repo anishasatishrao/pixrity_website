@@ -955,6 +955,7 @@ footer {
     /* Further reduced from 4rem 0 2rem */
     background: #1f1f1f;
     color: #fff;
+    --text-secondary: #aaaaaa; /* Lighter grey for better contrast on dark background */
 }
 
 .footer-grid {
