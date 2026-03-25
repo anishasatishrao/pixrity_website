@@ -537,7 +537,7 @@ nav ul a:hover {
 }
 
 .feature-item i {
-    font-size: 2.5rem;
+    font-size: 2.2rem !important; /* Unified Size */
     color: var(--accent);
     background: var(--accent-light);
     width: 64px;
@@ -656,8 +656,7 @@ nav ul a:hover {
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid var(--border);
-    font-size: 2rem;
-    /* Reduced icon size */
+    font-size: 2.2rem !important; /* Unified Size */
 }
 
 .card-icon-area i {
@@ -1497,14 +1496,24 @@ footer .logo span {
 .touchpoint-icon {
     width: 52px;
     height: 52px;
-    background: var(--accent);
+    background: var(--accent-light) !important; /* Lighter background for better gradient visibility */
+    border: 1px solid var(--border);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
-    font-size: 1.5rem;
+    color: var(--accent);
+    font-size: 2.2rem !important; /* Unified Size */
     flex-shrink: 0;
+}
+
+.touchpoint-icon i {
+    background: linear-gradient(90deg, #1A73E8 0%, #8E24AA 25%, #EA4335 50%, #8E24AA 75%, #1A73E8 100%) !important;
+    background-size: 200% auto !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    animation: gradient-shift 4s ease-in-out infinite !important;
 }
 
 .touchpoint-title h3 {
@@ -2190,24 +2199,23 @@ footer .logo span {
     }
 
     .why-item-icon {
-        font-size: 1.5rem;
+        font-size: 2.2rem !important; /* Unified Size */
         min-width: 50px;
         height: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
-        background: rgba(184, 134, 11, 0.1);
-        /* Gold tint */
+        background: var(--accent-light) !important; /* Standard Light Background */
         border-radius: 50%;
     }
 
     .why-item-icon i {
-        background: linear-gradient(90deg, #1A73E8 0%, #8E24AA 25%, #EA4335 50%, #8E24AA 75%, #1A73E8 100%);
-        background-size: 200% auto;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: gradient-shift 4s ease-in-out infinite;
+        background: linear-gradient(90deg, #1A73E8 0%, #8E24AA 25%, #EA4335 50%, #8E24AA 75%, #1A73E8 100%) !important;
+        background-size: 200% auto !important;
+        background-clip: text !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        animation: gradient-shift 4s ease-in-out infinite !important;
     }
 
     .why-item-content h4 {
@@ -2412,8 +2420,13 @@ footer .logo span {
 }
 
 .benefit-tile i {
-    font-size: 2rem;
-    color: var(--accent);
+    font-size: 2.2rem !important; /* Unified Size */
+    background: linear-gradient(90deg, #1A73E8 0%, #8E24AA 25%, #EA4335 50%, #8E24AA 75%, #1A73E8 100%) !important;
+    background-size: 200% auto !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    animation: gradient-shift 4s ease-in-out infinite !important;
     margin-bottom: 0.5rem;
     margin-inline: auto;
 }
