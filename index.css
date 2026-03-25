@@ -972,7 +972,7 @@ footer {
 
 footer .logo,
 footer .logo span {
-    color: #fff;
+    color: #fff !important;
 }
 
 .footer-links h4 {
@@ -2047,7 +2047,7 @@ footer .logo span {
         font-size: 1.1rem;
         /* Reduced from 24px/1.5rem to fit */
         margin-bottom: 1rem;
-        color: #fff;
+        color: #fff !important;
         display: flex;
         align-items: center;
         gap: 6px;
@@ -2063,7 +2063,7 @@ footer .logo span {
     }
 
     .footer-brand .logo span {
-        display: none;
+        display: none !important;
         /* Hide any decorative span if causing width issues */
     }
 
