@@ -249,13 +249,26 @@ nav ul a:hover {
     z-index: 1001;
     border-radius: 12px;
     padding: 0.8rem 0;
-    top: calc(100% + 15px);
+    top: calc(100% + 5px); /* Reduced gap */
     left: 50%;
     transform: translateX(-50%) translateY(10px);
     opacity: 0;
     transition: all 0.3s ease;
     border: 1px solid rgba(255,255,255,0.1);
+    pointer-events: none; /* Inherit pointer-events from parent only on active */
 }
+
+/* Hover Bridge to keep dropdown open */
+.dropdown-content::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: transparent;
+}
+
 
 .dropdown-content a {
     color: #FFFFFF !important;
@@ -280,6 +293,7 @@ nav ul a:hover {
     flex-direction: column !important;
     opacity: 1;
     transform: translateX(-50%) translateY(0);
+    pointer-events: all;
 }
 
 .dropbtn {
