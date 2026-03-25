@@ -1461,6 +1461,8 @@ footer .logo span {
     padding: 0;
     transition: var(--transition);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .touchpoint-card:hover {
@@ -1507,6 +1509,13 @@ footer .logo span {
 
 .touchpoint-content {
     padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.touchpoint-content .btn-primary {
+    margin-top: auto;
 }
 
 .touchpoint-description {
