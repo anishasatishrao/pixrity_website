@@ -23,7 +23,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Intersection Observer for scroll animations
+    // Animated Neon Tubes Integration
+    const initHeroTubes = async () => {
+        const container = document.getElementById('hero-tubes');
+        if (!container) return;
+
+        try {
+            const module = await import('https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js');
+            const TubesCursor = module.default;
+
+            TubesCursor(container, {
+                tubes: {
+                    colors: ["#00E5FF", "#7B61FF", "#FF2D95"],
+                    lights: {
+                        intensity: 200,
+                        colors: ["#00E5FF", "#7B61FF", "#1A1A2E", "#FF2D95"]
+                    }
+                }
+            });
+        } catch (error) {
+            console.error("Failed to load NeonFlow:", error);
+        }
+    };
+
+    initHeroTubes();
+
+    // Intersection Observer for reveal elements
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'

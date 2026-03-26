@@ -348,7 +348,6 @@ nav ul a:hover {
 
 /* Background Cleanup */
 .hero {
-    background: var(--bg-color);
     text-align: center;
     justify-content: center;
     padding-top: 140px;
@@ -357,7 +356,33 @@ nav ul a:hover {
     display: flex;
     align-items: center;
     position: relative;
-    overflow: visible;
+    overflow: hidden;
+    background: #000; /* Ensure black background for neon effect */
+}
+
+.hero-tubes-container {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-tubes-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    /* Stack content vertically */
+    align-items: center;
+    justify-content: center;
+    max-width: 1300px;
+    /* Limit width for reading */
+    margin: 0 auto;
+    position: relative;
+    z-index: 10; /* Content on top */
 }
 
 /* Background Glows */
