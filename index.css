@@ -365,6 +365,8 @@ nav ul a:hover {
     inset: 0;
     z-index: 1; /* Keep it as a base layer */
     pointer-events: auto; /* Changed to auto to detect mouse movement */
+    mix-blend-mode: multiply; /* Make neon visible on light backgrounds */
+    opacity: 0.9;
 }
 
 .hero-tubes-container canvas {

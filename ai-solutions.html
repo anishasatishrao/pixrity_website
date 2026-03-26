@@ -491,6 +491,21 @@
 
     <script src="index.js"></script>
     <script src="contact.js"></script>
+    <script type="module">
+        import TubesCursor from 'https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js';
+        const container = document.getElementById('hero-tubes');
+        if (container) {
+            TubesCursor(container, {
+                tubes: {
+                    colors: ["#2196F3", "#9C27B0", "#E91E63"],
+                    lights: {
+                        intensity: 600,
+                        colors: ["#00BCD4", "#673AB7", "#1A1A2E", "#E91E63"]
+                    }
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>

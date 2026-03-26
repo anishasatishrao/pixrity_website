@@ -23,30 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Animated Neon Tubes Integration
-    const initHeroTubes = async () => {
-        const container = document.getElementById('hero-tubes');
-        if (!container) return;
-
-        try {
-            const module = await import('https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js');
-            const TubesCursor = module.default;
-
-            TubesCursor(container, {
-                tubes: {
-                    colors: ["#00B8D4", "#651FFF", "#D500F9"], // More vibrant/darker neons
-                    lights: {
-                        intensity: 500, // Increased intensity for light backgrounds
-                        colors: ["#00B8D4", "#651FFF", "#1A1A2E", "#D500F9"]
-                    }
-                }
-            });
-        } catch (error) {
-            console.error("Failed to load NeonFlow:", error);
-        }
-    };
-
-    initHeroTubes();
+    // Static Neon Flow handled in individual HTML pages for cross-origin stability
 
     // Intersection Observer for reveal elements
     const observerOptions = {
