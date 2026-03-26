@@ -444,41 +444,31 @@
             </div>
         </div>
     </div>
-
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.146.0/three.min.js"></script>
     <script src="index.js"></script>
     <script src="contact.js"></script>
     <script type="module">
-        console.log("Initializing Neon Tubes...");
         import TubesCursor from 'https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js';
         const container = document.getElementById('hero-tubes');
-        if (container) {
-            try {
-                TubesCursor(container, {
-                    tubes: {
-                        colors: ["#1A237E", "#4A148C", "#880E4F"], // Darker, richer colors for white background
-                        lights: {
-                            intensity: 2000, // Significantly higher intensity
-                            colors: ["#2196F3", "#9C27B0", "#E91E63", "#1A1A2E"]
+        const init = () => {
+            if (container && typeof TubesCursor === 'function') {
+                try {
+                    TubesCursor(container, {
+                        tubes: {
+                            colors: ["#1A237E", "#4A148C", "#880E4F"],
+                            lights: {
+                                intensity: 2000,
+                                colors: ["#2196F3", "#9C27B0", "#E91E63", "#1A1A2E"]
+                            }
                         }
-                    }
-                });
-                console.log("Neon Tubes Initialized Successfully.");
-            } catch (e) {
-                console.error("Neon Tubes Initialization Error:", e);
+                    });
+                } catch (e) {
+                    console.error("Neon Tubes Initialization Error:", e);
+                }
             }
-        } else {
-            console.warn("Neon Tubes Container not found!");
-        }
-    </script>
-    <script>
-        // Fallback: direct button wiring in case event delegation fails
-        document.querySelectorAll('.contact-trigger').forEach(function (btn) {
-            btn.addEventListener('click', function (e) {
-                e.preventDefault();
-                var modal = document.getElementById('contactModal');
-                if (modal) { modal.classList.add('active'); document.body.style.overflow = 'hidden'; }
-            });
-        });
+        };
+        window.addEventListener('load', init);
     </script>
 </body>
 

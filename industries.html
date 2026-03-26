@@ -591,22 +591,27 @@
         </div>
     </div>
 
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.146.0/three.min.js"></script>
     <script src="index.js"></script>
     <script src="contact.js"></script>
     <script type="module">
         import TubesCursor from 'https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js';
         const container = document.getElementById('hero-tubes');
-        if (container) {
-            TubesCursor(container, {
-                tubes: {
-                    colors: ["#1A237E", "#4A148C", "#880E4F"],
-                    lights: {
-                        intensity: 2000,
-                        colors: ["#2196F3", "#9C27B0", "#E91E63", "#1A1A2E"]
+        const init = () => {
+            if (container && typeof TubesCursor === 'function') {
+                TubesCursor(container, {
+                    tubes: {
+                        colors: ["#1A237E", "#4A148C", "#880E4F"],
+                        lights: {
+                            intensity: 2000,
+                            colors: ["#2196F3", "#9C27B0", "#E91E63", "#1A1A2E"]
+                        }
                     }
-                }
-            });
-        }
+                });
+            }
+        };
+        window.addEventListener('load', init);
     </script>
 </body>
 
