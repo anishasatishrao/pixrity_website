@@ -34,10 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             TubesCursor(container, {
                 tubes: {
-                    colors: ["#00E5FF", "#7B61FF", "#FF2D95"],
+                    colors: ["#00B8D4", "#651FFF", "#D500F9"], // More vibrant/darker neons
                     lights: {
-                        intensity: 200,
-                        colors: ["#00E5FF", "#7B61FF", "#1A1A2E", "#FF2D95"]
+                        intensity: 500, // Increased intensity for light backgrounds
+                        colors: ["#00B8D4", "#651FFF", "#1A1A2E", "#D500F9"]
                     }
                 }
             });

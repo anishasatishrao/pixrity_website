@@ -357,14 +357,14 @@ nav ul a:hover {
     align-items: center;
     position: relative;
     overflow: hidden;
-    background: #000; /* Ensure black background for neon effect */
+    background: transparent; /* Restored to transparent/original */
 }
 
 .hero-tubes-container {
     position: absolute;
     inset: 0;
-    z-index: 1;
-    pointer-events: none;
+    z-index: 1; /* Keep it as a base layer */
+    pointer-events: auto; /* Changed to auto to detect mouse movement */
 }
 
 .hero-tubes-container canvas {
@@ -383,6 +383,11 @@ nav ul a:hover {
     margin: 0 auto;
     position: relative;
     z-index: 10; /* Content on top */
+    pointer-events: none; /* Allow events to pass through to the tubes layer */
+}
+
+.hero .container * {
+    pointer-events: auto; /* Make child elements (buttons, text) interactive */
 }
 
 /* Background Glows */
